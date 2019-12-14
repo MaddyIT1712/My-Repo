@@ -1,0 +1,23 @@
+Customer Code : <input type="text" [(ngModel)]="CustomerModel.CustomerCode"/><br/><br/>
+Customer Name : <input type="text" [(ngModel)]="CustomerModel.CustomerName"/><br/><br/>
+Customer Amount : <input type="text" [(ngModel)]="CustomerModel.CustomerAmount"/><br/><br/>
+<input type="button" (click)="Add()" value="Add" />
+
+<p appHighlight>Highlight Me</p>
+<table style="border:1pt solid black; padding:5px;">
+  <tr>
+    <td style="border:1pt solid black; padding:5px;">Customer Code</td>
+    <td style="border:1pt solid black; padding:5px;">Customer Name</td>
+    <td style="border:1pt solid black; padding:5px;">Customer Amount</td>
+    <td style="border:1pt solid black; padding:5px;">Action</td>
+  </tr>  
+  <tr #customer *ngFor="let cust of CustomerModels">
+    <td style="border:1pt solid black; padding:5px;">{{cust.CustomerCode}}</td>
+    <td style="border:1pt solid black; padding:5px;">{{cust.CustomerName}}</td>
+    <td style="border:1pt solid black; padding:5px;">{{cust.CustomerAmount}}</td>
+    <td style="border:1pt solid black; padding:5px;">
+       <input type="button" (click)="Edit(cust)" value="Edit" />
+       <input type="button" (click)="Delete(cust)" value="Delete" />
+    </td>
+  </tr>
+</table>
