@@ -17,7 +17,12 @@ export class HomepageComponent implements OnInit {
     return a + ' is going to ' + b; 
   }
 
-  isDisable : boolean = true;
-  myString = "This is working fine"
-
+  isDisable : boolean = false;
+  myString : string = "This is working fine";
+  myID : string = "myappid";
+  isTrue : boolean = true;
+  text = {
+    "text-red" : this.isTrue,
+    "text-blue" : !this.isTrue
+  };
 }

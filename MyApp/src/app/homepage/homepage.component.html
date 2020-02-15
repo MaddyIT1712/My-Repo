@@ -1,9 +1,11 @@
 <h1>{{ myName}}</h1>
 <h2>{{ getStatemant("Rahul", "Muzaffarpur")}}</h2>
-<h3>He wants Rs. {{ 100 * 34}} for trip</h3>
-<p>homepage is working fine!</p>
-<button [disabled]='isDisable'>OK</button><br><br>
+<h3 style="color:green; border : 1px solid black">He wants Rs. {{ 100 * 34}} for trip</h3>
+<p [style.font-size.px]="!isTrue ? 12 : 30" >homepage is working fine!</p>
+<button class="btn btn-danger" [disabled]='isDisable'>OK</button><br><br>
 <button disabled={{isDisable}}>CANCEL</button><br/>
-<p [hidden]="false">{{ myString }}</p>
-
+<p [ngClass]="text" [hidden]="false">{{ myString }}</p><br><br>
+<input [disabled]='isDisable' type="text" id="{{myID}}" value="madhavi"/><br><br>
+<div [class.myClass]="isTrue">This is my div</div>
+<app-output-decorator [master]="master"></app-output-decorator >
 
